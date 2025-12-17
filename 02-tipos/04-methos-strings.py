@@ -1,0 +1,13 @@
+animanl = "  elefante   Elegante "
+print(animanl.upper())
+print(animanl.lower())
+print(animanl.strip().capitalize())
+print(animanl.title())
+print(animanl.strip())
+print(animanl.lstrip())
+print(animanl.rstrip())
+print(animanl.find('an'))
+print(animanl.find('asd'))
+print(animanl.replace('elefante', 'leon'))
+print('ante' in animanl)
+print('ante' not in animanl)
