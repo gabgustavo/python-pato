@@ -20,5 +20,11 @@ usuarios = [["Juan", 25],
             ["María", 27]
             ]
 
-usuarios.sort()
+
+def ordenar(elemento):
+    return elemento[1]
+
+
+# usuarios.sort()
+usuarios.sort(key=ordenar, reverse=True)
 print(usuarios)
