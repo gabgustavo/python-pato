@@ -11,8 +11,13 @@ class Coordenadas:
     def __ne__(self, other):
         return self.lat != other.lat and self.lon != other.lon
 
+    # esto permite hacer la validación de menor que entre objetos de la clase Coordenadas
     def __lt__(self, other):
         return self.lat + other.lat < self.lon + other.lon
+
+    # esto permite hacer la validación de menor o igual que entre objetos de la clase Coordenadas
+    def __le__(self, other):
+        return self.lat + other.lat <= self.lon + other.lon
 
 
 coords1 = Coordenadas(9, 20)
@@ -22,3 +27,4 @@ coords2 = Coordenadas(10, 20)
 print(coords1 == coords2)
 print(coords1 != coords2)
 print(coords1 < coords2)
+print(coords1 <= coords2)
