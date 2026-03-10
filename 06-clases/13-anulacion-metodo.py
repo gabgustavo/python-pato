@@ -19,4 +19,4 @@ class Pato(Ave):
 
 
 pato = Pato()
-pato.volador()
+pato.vuela()
