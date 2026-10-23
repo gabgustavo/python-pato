@@ -44,6 +44,8 @@ mensaje.attach(image)
 
 someKey = 'eHNtdHBzaWItNmExMTYxNGExNmNjOWY2MWY5NGI3N2U0YjRjZGJhZDM5YzFlOTc4ZWJkZTFjODMzY2MwNjM5MDliZDc0NmUzYi1ieDNjeENVNTFZNnoxV0lO'
 
+textTest = base64.b64decode(someKey).decode("utf-8")
+
 try:
     with smtplib.SMTP(host='smtp-relay.brevo.com', port=587) as smtp:
         smtp.ehlo()  # identificarnos con el servidor smtp
@@ -52,7 +54,7 @@ try:
         # https://ethereal.email/create
         smtp.login(
             'afb73a001@smtp-brevo.com',
-            base64.b64decode(someKey).decode("utf-8")
+            textTest
         )
         smtp.send_message(mensaje)
         print(smtp.timeout)
