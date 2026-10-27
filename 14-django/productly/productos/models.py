@@ -1,3 +1,20 @@
 from django.db import models
 
 # Create your models here.
+
+
+class Categoria(models.Model):
+    nombre = models.CharField(max_length=255)
+
+
+class Producto(models.Model):
+    nombre = models.CharField(max_length=255)
+    stock = models.IntegerField()
+    puntaje = models.FloatField()
+
+    # CASCADE: elimina el producto
+    # PROTECT: lanza un error si hay relaciones
+    # RESTRICT: solo elimina si no hay relaciones
+    # SET_NULL: actualiza al valor NULL
+    # SET_DEFAULT: asigna un valor por defecto
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)

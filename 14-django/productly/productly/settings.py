@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # nombreApp, archivo apps.py, nombre de la Clase
     'productos.apps.ProductosConfig',
 ]
 
