@@ -21,3 +21,8 @@ python3 manage.py makemigrations
 # y finalmente ejecutar
 python3 manage.py migrate
 ```
+
+# Crear usuario administrador para DJango
+```bash
+python3 manage.py createsuperuser
+```
