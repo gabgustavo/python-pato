@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} | detalle {% endblock %}
+
+{% block content %}
+<h1>Detalle de producto</h1>
+
+<div>
+    <h6 class="mb-3">{{ producto.nombre }}</h6>
+    <p>{{ producto.categoria }}</p>
+    <p>{{ producto.stock }}</p>
+    <p>{{ producto.puntaje }}</p>
+    <p>{{ producto.creado_en }}</p>
+    <p></p>
+    <p></p>
+</div>
+
+{% endblock %}
