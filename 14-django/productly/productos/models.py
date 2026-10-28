@@ -7,6 +7,10 @@ from django.utils import timezone
 class Categoria(models.Model):
     nombre = models.CharField(max_length=255)
 
+    # redefinir str
+    def __str__(self):
+        return self.nombre
+
 
 class Producto(models.Model):
     nombre = models.CharField(max_length=255)
@@ -22,3 +26,8 @@ class Producto(models.Model):
 
     # actualizar el modelo
     creado_en = models.DateTimeField(default=timezone.now)
+
+    # redefinir str
+
+    def __str__(self):
+        return self.nombre
