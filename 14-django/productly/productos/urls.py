@@ -6,4 +6,5 @@ app_name = 'producto'
 urlpatterns = [
     path("", views.index, name="index"),
     path("<int:producto_id>", views.detail, name="detalle"),
+    path("formulario", views.formulario, name="formulario"),
 ]

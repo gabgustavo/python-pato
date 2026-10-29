@@ -13,6 +13,17 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from pathlib import Path
 
+# indicarle a DJango que nos entregue el control
+from django.forms.renderers import TemplatesSetting
+
+
+class CustomFormRender(TemplatesSetting):
+    formTemplateName = 'form-snippet.html'
+
+
+FORM_RENDER = "productly.settings.CustomFormRender"
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -40,8 +51,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # nombreApp, archivo apps.py, nombre de la Clase
+    "crispy_forms",
+    "crispy_bootstrap5",
+    'django.forms',
     'productos.apps.ProductosConfig',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

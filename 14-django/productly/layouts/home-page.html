@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block title %} | Inicio {% endblock %}
+
+{% block content %}
+
+<section class="py-5 bg-light">
+    <div class="container py-lg-5">
+
+        <!-- Encabezado -->
+        <div class="text-center mb-5">
+            <span class="badge rounded-pill text-bg-primary px-3 py-2 mb-3">
+                NUESTRA PROPUESTA
+            </span>
+
+            <h2 class="display-5 fw-bold text-dark mb-3">
+                Ideas que se convierten en soluciones
+            </h2>
+
+            <p class="lead text-secondary mx-auto" style="max-width: 650px;">
+                Diseñamos experiencias digitales modernas, funcionales
+                y pensadas para simplificar tu día a día.
+            </p>
+        </div>
+
+        <!-- Tarjetas -->
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4 p-lg-5">
+                        <div class="rounded-3 bg-primary-subtle text-primary
+                                    d-inline-flex align-items-center justify-content-center
+                                    p-3 mb-4">
+                            <span class="fs-3">✦</span>
+                        </div>
+
+                        <h3 class="h4 fw-bold mb-3">
+                            Diseño intuitivo
+                        </h3>
+
+                        <p class="text-secondary mb-0">
+                            Interfaces claras y atractivas que permiten
+                            encontrar lo que necesitas sin complicaciones.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4 p-lg-5">
+                        <div class="rounded-3 bg-success-subtle text-success
+                                    d-inline-flex align-items-center justify-content-center
+                                    p-3 mb-4">
+                            <span class="fs-3">↗</span>
+                        </div>
+
+                        <h3 class="h4 fw-bold mb-3">
+                            Alto rendimiento
+                        </h3>
+
+                        <p class="text-secondary mb-0">
+                            Soluciones ágiles y eficientes, preparadas
+                            para ofrecer una experiencia fluida.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mx-md-auto">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4 p-lg-5">
+                        <div class="rounded-3 bg-warning-subtle text-warning
+                                    d-inline-flex align-items-center justify-content-center
+                                    p-3 mb-4">
+                            <span class="fs-3">◇</span>
+                        </div>
+
+                        <h3 class="h4 fw-bold mb-3">
+                            Evolución constante
+                        </h3>
+
+                        <p class="text-secondary mb-0">
+                            Una base flexible para crecer, incorporar
+                            funcionalidades y adaptarse a nuevos retos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Llamada a la acción -->
+        <div class="text-center mt-5 pt-3">
+            <a href="{% url 'producto:index' %}" class="btn btn-primary btn-lg rounded-pill px-5">
+                Descubrir más
+            </a>
+            <p class="small text-secondary mt-3 mb-0">
+                Una mejor experiencia comienza con una buena idea.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+
+{% endblock %}

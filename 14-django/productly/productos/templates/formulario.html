@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} | Formulario {% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form action="{% url 'producto:formulario' %}" method="post" novalidate>
+    {% csrf_token %}
+
+    {{ form|crispy }}
+
+    <input type="submit" value="Guardar" class="btn btn-primary mt-3">
+</form>
+
+{% endblock %}
